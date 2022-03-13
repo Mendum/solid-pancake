@@ -5,6 +5,6 @@
 
 | Funkcionalne zahteve  | Nefunkcionalne zahteve |
 | ------------- | ------------- |
-| Vnos registrske številke | Validacija formata / 0.1 sec  |
-| Obvenza polja (placilo, tip registerske)  | Izpolnjevanje na uporabnika / 10min  |
-| Obvestilo o uspesnem nakupo | generaranje PDF potrdila in obvestilo na mail / 30s  |
+| Vnos registrske številke | Validacija formata <= 0.314 sec  |
+| Obvenza polja (placilo, tip registerske)  | Izpolnjevanje na uporabnika < 10min  |
+| Obvestilo o uspesnem nakupo | generaranje PDF potrdila in obvestilo na mail <= 30s  |

@@ -5,6 +5,6 @@
 
 | Funkcionalne zahteve  | Nefunkcionalne zahteve |
 | ------------- | ------------- |
-| Vnos registrske številke | Validacija formata <= 0.314 sec  |
-| Obvenza polja (placilo, tip registerske)  | Izpolnjevanje na uporabnika < 10min  |
-| Obvestilo o uspesnem nakupo | generaranje PDF potrdila in obvestilo na mail <= 30s  |
+| Registracija uporabnika (forma) | Validacija in kreiranje uporabniskega racuna <= 1 sec  |
+| Kreiranje enkratnega gesla in obvestilo o zamenjavi gesla | generaranje gesla in obvestilo na mail <= 30s  |
+| Hranjenje seje in JWT zetona | esja <= 60min  |

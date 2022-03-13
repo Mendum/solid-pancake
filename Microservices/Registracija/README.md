@@ -1,5 +1,5 @@
 
-![RegistracijaDiagram drawio](https://user-images.githubusercontent.com/23051058/158082475-4356b152-a2f2-44c8-af76-28975238f2b1.png)
+![RegistracijaDiagram drawio](https://user-images.githubusercontent.com/23051058/158082557-00102eee-4f5b-4232-8913-12a00263f51c.png)
 
 ## **Zahteve**
 

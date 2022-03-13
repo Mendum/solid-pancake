@@ -7,4 +7,4 @@
 | ------------- | ------------- |
 | Vnos registrske številke | Validacija formata / 0.1 sec  |
 | Obvenza polja (placilo, tip registerske)  | Izpolnjevanje na uporabnika / 10min  |
-| Obvestilo o uspesnem nakupo | generaranje PDF potrdila in obvestilo na mail / 30s  |
+| Obvestilo o uspesnem nakupu | generaranje PDF potrdila in obvestilo na mail / 30s  |

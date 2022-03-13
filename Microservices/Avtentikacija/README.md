@@ -6,6 +6,7 @@
 
 | Funkcionalne zahteve  | Nefunkcionalne zahteve |
 | ------------- | ------------- |
-| A  | 1 min  |
-| B  | 2 min  |
-| C  | 3 min  |
+| Preveri veljavnost e-vinjete  | Avtomatsko preverjanje <= 0.314 sec  |
+| Pregled placil  | Izpis vseh veljavnih placil uporabnika <= 1.314 sec  |
+| Avtentikacija uporabnika (two-step)  | Posiljanje avtentikacije na e-posto ter telefonsko stevilko <= 30sec  |
+

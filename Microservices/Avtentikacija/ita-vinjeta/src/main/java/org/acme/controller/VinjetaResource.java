@@ -1,5 +1,6 @@
 package org.acme.controller;
 
+import org.acme.consumer.VinjetaConsumer;
 import org.acme.models.History;
 import org.acme.models.Vinjeta;
 import org.acme.service.VinjetaService;
@@ -7,10 +8,9 @@ import org.acme.service.VinjetaService;
 import java.util.*;
 import java.text.SimpleDateFormat;
 
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
+import javax.inject.Inject;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 
 @Path("/vinjeta")
 public class VinjetaResource {
@@ -35,6 +35,16 @@ public class VinjetaResource {
                         true
                 )
         );
+    }
+
+    @Inject
+    VinjetaConsumer consumer;
+
+    @GET
+    @Path("/last")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String last() {
+        return consumer.getIdentifikator();
     }
 
     @GET

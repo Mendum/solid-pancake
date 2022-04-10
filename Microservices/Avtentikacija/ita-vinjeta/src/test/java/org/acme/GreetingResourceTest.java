@@ -18,4 +18,13 @@ public class GreetingResourceTest {
              .body(is("Hello RESTEasy"));
     }
 
+    /*@Test
+    public void testExtensionsIdEndpoint() {
+        given()
+            .when().get("/history/one?identifikator=b17d479c8839cb08")
+            .then()
+            .statusCode(200)
+            .body("$.size()", is(1));
+    }*/
+
 }

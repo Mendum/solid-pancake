@@ -14,17 +14,17 @@ public class Nakup {
     @Id
     private ObjectId id;
     private Integer billInternalCode;
-    private String content;
+    private Vinjeta vinjeta;
     private LocalDateTime date;
 
     public Nakup(){}
 
     public Nakup(
             Integer billInternalCode,
-            String content,
+            Vinjeta vinjeta,
             LocalDateTime date) {
         this.billInternalCode = billInternalCode;
-        this.content = content;
+        this.vinjeta = vinjeta;
         this.date = date;
     }
 

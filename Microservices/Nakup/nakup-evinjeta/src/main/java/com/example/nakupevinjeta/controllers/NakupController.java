@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @AllArgsConstructor
 public class NakupController {
 
-    private final NakupService vinjetaService;
+    private final NakupService nakupService;
 
     @GetMapping("/single")
     public List<Nakup> fetchNakupList(
@@ -21,27 +21,34 @@ public class NakupController {
                     value = "name",
                     defaultValue = "World"
             )String name){
-        return vinjetaService.getNakupList();
+        return nakupService.getNakupList();
     }
 
     @GetMapping("/all")
     public List<Nakup> fetchAllNakupList() {
-        return vinjetaService.getAllNakupList();
+        return nakupService.getAllNakupList();
     }
 
     @GetMapping("/lastBillInternalCode")
     public Integer fetchLastBillInternalCode() {
-        return vinjetaService.getLastBillInternalCode();
+        return nakupService.getLastBillInternalCode();
+    }
+
+    @GetMapping("/check")
+    public Boolean checkPurchse(@RequestParam (name="identifikator") String identifikator) {
+        return nakupService.checkPurchase(identifikator);
     }
 
     @PostMapping("/new")
-    public Nakup newNakup(@RequestBody Nakup nakup){
-        return vinjetaService.newNakup(nakup.getContent());
+    public Nakup newNakup(){ //@RequestBody Nakup nakup
+
+        System.out.println("se naredi");
+        return nakupService.newNakup();
     }
 
     @DeleteMapping("/remove")
     public boolean removeNakup(){
-        return vinjetaService.removeNakup();
+        return nakupService.removeNakup();
     }
 
 }

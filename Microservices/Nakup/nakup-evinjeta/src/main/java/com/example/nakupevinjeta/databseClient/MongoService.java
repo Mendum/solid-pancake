@@ -54,7 +54,6 @@ public class MongoService {
     }
 
     public Integer findLastBillInternalCode() {
-
         try{
 
             Bson projectionFields = Projections.fields(
@@ -69,8 +68,36 @@ public class MongoService {
         }catch(Exception e){
             System.out.println("No results found.");
             System.out.println(e.getMessage());
-            return 1;
+            return 0;
         }
     }
 
+    public Boolean IsCheckPurchase(String identifikator) {
+        try{
+
+            System.out.println("identifikator");
+            System.out.println(identifikator);
+
+            Bson projectionFields = Projections.fields(
+                    Projections.include("vinjeta"),
+                    Projections.excludeId());
+
+            Nakup doc = collection.find(
+                    eq("vinjeta.identifikator", identifikator))
+                    .projection(projectionFields)
+                    .first();
+
+            System.out.println(doc);
+
+            if( doc != null){
+                return true;
+            }else{
+                return false;
+            }
+        }catch(Exception e){
+            System.out.println("No results found.");
+            System.out.println(e.getMessage());
+            return false;
+        }
+    }
 }
